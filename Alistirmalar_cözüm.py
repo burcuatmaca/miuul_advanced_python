@@ -1,4 +1,7 @@
-####################
+########################################################################################################################
+# List Comprehension ve Pandas Alıştırmalar
+########################################################################################################################
+
 ##Görev 1: List Comprehension yapısı kullanarak car_crashes verisindeki numeric değişkenlerin isimlerini büyük harfe çeviriniz ve başına NUM ekleyiniz.
 #Numeric olmayan değişkenlerin de isimleri büyümeli. Tek bir list comprehension yapısı kullanılmalı.
 
@@ -12,7 +15,6 @@ df.dtypes
 ["NUM_" + col.upper() if df[col].dtype == "float64" else col.upper() for col in df.columns ]
 
 
-####################
 ##Görev 2: List Comprehension yapısı kullanarak car_crashes verisinde isminde "no" barındırmayan değişkenlerin isimlerinin sonuna "FLAG" yazınız.
 #Tüm değişkenlerin isimleri büyük harf olmalı. Tek bir list comprehension yapısı ile yapılmalı.
 
@@ -23,7 +25,6 @@ df.columns
 [col.upper() + "_FLAG" if "no" not in col else col.upper() for col in df.columns]
 
 
-####################
 ##Görev 3: List Comprehension yapısı kullanarak aşağıda verilen değişken isimlerinden FARKLI olan değişkenlerin isimlerini seçiniz ve yeni bir dataframe oluşturunuz.
 #Önce verilen listeye göre list comprehension kullanarak new_cols adında yeni liste oluşturunuz.
 #Sonra df[new_cols] ile bu değişkenleri seçerek yeni bir df oluşturunuz ve adını new_df olarak isimlendiriniz.
